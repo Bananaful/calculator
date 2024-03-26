@@ -16,7 +16,7 @@
         <div class="main_block">
             <h1>Калькулятор <br> кредитных возможностей</h1>
             <label>
-                <h3>Введите данные для расчета</h3>
+                <h3>Введите данные для рассчета</h3>
                 <div class="vvod">
                     <form>
                         <input class="pole" type="number" id="prihod" placeholder="Сумма дохода семьи">
@@ -26,6 +26,9 @@
                     </form>
                     <form>
                         <input class="pole" type="number" id="children" placeholder="Количество детей на иждивении">
+                    </form>
+					<form>
+                        <input class="pole" type="number" id="oldman" placeholder="Количество пенсионеров в семье">
                     </form>
                     <form>
                         <input class="pole" type="number" id="percent" placeholder="Процент по кредиту">
@@ -39,11 +42,11 @@
                         <div>
                             <label>
                                 <h4>Срок кредита с:</h4>
-                                <input type="date" id="start">
+                                <input type="date" id="start" value="2023-03-20">
                             </label>
                             <label>
                                 <h4>по:</h4>
-                                <input type="date" id="finish">
+                                <input type="date" id="finish" value="2024-03-20">
                             </label>
                         </div>
                         <button class="knopka" type="button" onclick="logic()">Рассчитать</button>
