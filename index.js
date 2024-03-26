@@ -11,6 +11,7 @@ function logic() {
         head2.after(newTable);
         newTable.id = 'bodyt';
     }
+	var oldman = document.getElementById("oldman").value;
     var people = document.getElementById("people").value;
     var children = document.getElementById("children").value;
     var percent = document.getElementById("percent").value;
@@ -25,8 +26,8 @@ function logic() {
     var period = dates2 - dates;
     period /= 86400000;
 
-    var adults = people - children;
-    var pmin = adults * 14958 + children * 14169;
+    var adults = people - children - oldman;
+    var pmin = adults * 14958 + children * 14169 + oldman * 11802;
     document.getElementById("sk").innerHTML = period + " дней.";
     var sumPay = Math.round(period / 30);
     document.getElementById("kp").innerHTML = sumPay;
